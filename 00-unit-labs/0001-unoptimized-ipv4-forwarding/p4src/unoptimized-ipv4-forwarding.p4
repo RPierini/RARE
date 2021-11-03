@@ -126,7 +126,7 @@ control ctl_ingress(inout headers hdr,
     * Discard via V1Model mark_to_drop()
     */
    action act_ipv4_fib_discard() {
-      mark_to_drop();
+      mark_to_drop(standard_metadata);
    }
 
    /*
